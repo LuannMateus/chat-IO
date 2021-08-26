@@ -1,0 +1,10 @@
+# DEPENDENCIES
+node_modules
+
+# ENV
+.env
+.env.local
+.env.prod
+
+# IDE
+.vscode
