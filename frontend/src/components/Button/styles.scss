@@ -1,4 +1,6 @@
 .btn--primary {
+  width: 40%;
+
   border: 1px solid var(--input-primary-color);
 
   font-size: 0.8rem;
@@ -6,6 +8,8 @@
 
   background-color: var(--btn-primary-color);
   color: var(--text-primary-color);
+
+  margin: 0 4px;
 
   cursor: pointer;
 }
@@ -25,6 +29,6 @@
 // * xl
 @media screen and (min-width: 1000px) {
   .btn--primary {
-    width: 124px;
+    width: 20%;
   }
 }

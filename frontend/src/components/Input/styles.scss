@@ -1,11 +1,11 @@
 .input--primary {
-  width: 80%;
+  width: 100%;
 
   border: 1px solid var(--input-primary-color);
   border-radius: 2px;
 
   padding: 12px 4px;
-  margin-right: 4px;
+  margin: 0 4px;
 
   letter-spacing: 1px;
 
@@ -30,6 +30,6 @@
 // * xl
 @media screen and (min-width: 1000px) {
   .input--primary {
-    width: 60%;
+    width: 100%;
   }
 }

@@ -1,0 +1,237 @@
+.main__global-chat {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 412px;
+
+  overflow-y: scroll;
+
+  .global-chat__message--mine {
+    width: 40%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+
+    margin: 4px 8px;
+    padding: 0 4px;
+
+    border: 1px solid transparent;
+    border-radius: 12px 0px 12px 12px;
+
+    background: var(--bg-primary-color);
+    color: var(--text-primary-color);
+
+    p {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      width: 100%;
+      word-wrap: break-word;
+
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 0.7rem;
+      align-self: flex-end;
+
+      margin-top: 4px;
+    }
+  }
+
+  .global-chat__message--other {
+    width: 40%;
+
+    align-self: flex-start;
+    align-items: flex-end;
+
+    margin: 4px 8px;
+    padding: 0 4px;
+
+    border: 1px solid transparent;
+    border-radius: 0px 12px 12px 12px;
+
+    background: var(--bg-secondary-color);
+    color: var(--text-primary-color);
+
+    p {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      width: 100%;
+      word-wrap: break-word;
+
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 0.7rem;
+      align-self: flex-end;
+
+      margin-top: 4px;
+    }
+  }
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+  #main {
+    height: 100%;
+    padding: 0 200px;
+
+    .main__create-room {
+      font-size: 1.4rem;
+
+      margin-top: 24px;
+    }
+
+    .main__global-chat {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      height: 412px;
+
+      overflow-y: scroll;
+
+      .global-chat__message--mine {
+        width: 40%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-self: flex-end;
+
+        margin: 4px 8px;
+        padding: 0 4px;
+
+        border: 1px solid transparent;
+        border-radius: 12px 0px 12px 12px;
+
+        background: var(--bg-primary-color);
+        color: var(--text-primary-color);
+
+        p {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          width: 100%;
+          word-wrap: break-word;
+
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        span {
+          font-size: 0.7rem;
+          align-self: flex-end;
+
+          margin-top: 4px;
+        }
+      }
+
+      .global-chat__message--other {
+        width: 40%;
+
+        align-self: flex-start;
+        align-items: flex-end;
+
+        margin: 4px 8px;
+        padding: 0 4px;
+
+        border: 1px solid transparent;
+        border-radius: 0px 12px 12px 12px;
+
+        background: var(--bg-secondary-color);
+        color: var(--text-primary-color);
+
+        p {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          width: 100%;
+          word-wrap: break-word;
+
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        span {
+          font-size: 0.7rem;
+          align-self: flex-end;
+
+          margin-top: 4px;
+        }
+      }
+    }
+    .main__title {
+      font-size: 3rem;
+    }
+
+    .main__global-chat {
+      height: 670px;
+
+      overflow-y: scroll;
+
+      .global-chat__message--mine {
+        font-size: 1.4rem;
+      }
+
+      .global-chat__message--other {
+        font-size: 1.4rem;
+      }
+    }
+
+    .main__action {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #main {
+    padding: 0 400px;
+
+    .main__global-chat {
+      .global-chat__message--mine {
+        width: 40%;
+        p {
+          width: 100%;
+        }
+      }
+
+      .global-chat__message--other {
+        width: 40%;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    .main__action {
+      margin-top: 8px;
+    }
+  }
+}
