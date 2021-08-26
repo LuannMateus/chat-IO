@@ -1,0 +1,92 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main__create-room {
+    font-size: 1rem;
+    font-weight: 400;
+
+    margin-top: 14px;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .main__global-chat {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    .global-chat__message--mine {
+      align-self: flex-end;
+      margin-right: 4px;
+    }
+
+    .global-chat__message--other {
+      align-self: flex-start;
+      margin-left: 4px;
+    }
+  }
+
+  .main__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin-top: 24px;
+  }
+
+  .main__action {
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 4px 0;
+  }
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+  #main {
+    padding: 0 600px;
+
+    .main__create-room {
+      font-size: 1.4rem;
+
+      margin-top: 24px;
+    }
+
+    .main__title {
+      font-size: 3rem;
+    }
+
+    .main__global-chat {
+      .global-chat__message--mine {
+        font-size: 1.4rem;
+      }
+
+      .global-chat__message--other {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

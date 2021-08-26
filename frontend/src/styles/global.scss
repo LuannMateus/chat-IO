@@ -1,0 +1,42 @@
+:root {
+  --bg-primary-color: #8000ff;
+  --bg-secondary-color: #a639ff;
+
+  --input-primary-color: #8000ff;
+
+  --btn-primary-color: #8000ff;
+
+  --text-primary-color: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  height: 100%;
+
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+button,
+input {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+}

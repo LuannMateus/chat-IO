@@ -1,0 +1,30 @@
+.btn--primary {
+  border: 1px solid var(--input-primary-color);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  background-color: var(--btn-primary-color);
+  color: var(--text-primary-color);
+
+  cursor: pointer;
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+  .btn--primary {
+    width: 124px;
+  }
+}

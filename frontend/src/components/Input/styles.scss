@@ -1,0 +1,35 @@
+.input--primary {
+  width: 80%;
+
+  border: 1px solid var(--input-primary-color);
+  border-radius: 2px;
+
+  padding: 12px 4px;
+  margin-right: 4px;
+
+  letter-spacing: 1px;
+
+  font-size: 1rem;
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+  .input__primary {
+    padding: 12px 4px;
+  }
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+  .input--primary {
+    width: 60%;
+  }
+}

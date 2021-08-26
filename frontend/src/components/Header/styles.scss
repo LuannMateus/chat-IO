@@ -1,0 +1,36 @@
+#header {
+  height: 10vh;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--bg-primary-color);
+
+  margin: 0;
+  padding-left: 8px;
+
+  .header__title {
+    margin: 0;
+    color: var(--text-primary-color);
+  }
+}
+
+// * sm
+@media screen and (max-width: 569px) {
+  #header {
+    justify-content: center;
+  }
+}
+
+// * md
+@media screen and (max-width: 799px) {
+}
+
+// * lg
+@media screen and (max-width: 999px) {
+}
+
+// * xl
+@media screen and (min-width: 1000px) {
+}
