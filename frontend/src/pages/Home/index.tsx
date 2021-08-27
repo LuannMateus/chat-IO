@@ -1,10 +1,15 @@
 import { ChangeEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { io } from 'socket.io-client';
+import { v4 as uuid } from 'uuid';
+import { format } from 'date-fns';
+
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
-import { v4 as uuid } from 'uuid';
 
 import './styles.scss';
+import { Chat } from '../../components/Chat';
+import { Header } from '../../components/Header';
 
 const socket = io('http://localhost:3001');
 socket.on('connect', () => {});
@@ -48,7 +53,7 @@ const Home = () => {
   const renderChatMessages = () => {
     return chatMessages.map((message: Message, index) => {
       return (
-        <p
+        <div
           key={index}
           className={`${
             user === message.id
@@ -56,33 +61,40 @@ const Home = () => {
               : 'global-chat__message--other'
           }`}
         >
-          {message.value}
-        </p>
+          <p>
+            {message.value}
+            <span>{format(new Date(), 'hh:mm')}</span>
+          </p>
+        </div>
       );
     });
   };
 
   return (
-    <main id="main">
-      <span className="main__create-room">Create a room</span>
-      <h1 className="main__title">Global chat</h1>
+    <>
+      <Header />
+      <main id="main">
+        <Link to="/createRoom" className="main__create-room">
+          <span className="main__create-room">Create a room</span>
+        </Link>
+        <h1 className="main__title">Global chat</h1>
 
-      <section className="main__global-chat">
-        {renderChatMessages()}
-        {/* <p className="global-chat__message--mine">John Doe: HI Marie!</p>
-        <p className="global-chat__message--other">Marie Doe: HI John!</p> */}
-      </section>
+        <Chat>{renderChatMessages()}</Chat>
 
-      <section className="main__action">
-        <Input
-          type="text"
-          placeholder="Message..."
-          onChange={handleInputChange}
-          value={messageInput}
-        />
-        <Button onClick={handleSubmit}>Send</Button>
-      </section>
-    </main>
+        <section className="main__action">
+          <Input
+            type="text"
+            placeholder="Message..."
+            onChange={handleInputChange}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter') handleSubmit();
+            }}
+            value={messageInput}
+          />
+          <Button onClick={handleSubmit}>Send</Button>
+        </section>
+      </main>
+    </>
   );
 };
 

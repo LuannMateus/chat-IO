@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
 
+  height: 100%;
+
+  padding: 0 8px;
+
   .main__create-room {
     font-size: 1rem;
     font-weight: 400;
@@ -12,23 +16,6 @@
     &:hover {
       text-decoration: underline;
       cursor: pointer;
-    }
-  }
-
-  .main__global-chat {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-
-    .global-chat__message--mine {
-      align-self: flex-end;
-      margin-right: 4px;
-    }
-
-    .global-chat__message--other {
-      align-self: flex-start;
-      margin-left: 4px;
     }
   }
 
@@ -49,6 +36,14 @@
     justify-content: center;
 
     margin: 4px 0;
+
+    input {
+      flex: 10;
+    }
+
+    button {
+      flex: 1;
+    }
   }
 }
 
@@ -67,7 +62,8 @@
 // * xl
 @media screen and (min-width: 1000px) {
   #main {
-    padding: 0 600px;
+    height: 100%;
+    padding: 0 200px;
 
     .main__create-room {
       font-size: 1.4rem;
@@ -80,6 +76,10 @@
     }
 
     .main__global-chat {
+      height: 670px;
+
+      overflow-y: scroll;
+
       .global-chat__message--mine {
         font-size: 1.4rem;
       }
@@ -87,6 +87,20 @@
       .global-chat__message--other {
         font-size: 1.4rem;
       }
+    }
+
+    .main__action {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #main {
+    padding: 0 400px;
+
+    .main__action {
+      margin-top: 8px;
     }
   }
 }
