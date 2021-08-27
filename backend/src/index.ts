@@ -7,6 +7,7 @@ const app = express();
 export const server = http.createServer(app);
 
 import './infra/socketIo/globalChat';
+import './infra/socketIo/roomChat';
 
 app.use(express.json());
 app.use(cors());
